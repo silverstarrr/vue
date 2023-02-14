@@ -1,0 +1,164 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+
+// const numStr = ref('');
+// const result = ref(0);
+// let nums;
+// let alls;
+// let ops;
+// const numExp = /[^0-9]/;
+// const opExp = /[+\\-*/]/;
+// const exp = /[0-9]\d*|[+\-*/\(\)=]/g;
+// const numpad = function(num:number|string){
+//   if(num === 'AC'){
+//     numStr.value = '';
+//     result.value = 0;
+//   }
+//   numStr.value += num;
+//   if(num != '.' && typeof num === 'string'){
+//     nums = numStr.value.match(numExp);
+//     console.log(nums);
+//     ops = numStr.value.match(opExp);
+//     console.log(ops);
+//   }
+// }
+
+</script>
+<!-- 
+<template>
+  <table border="1">
+    <tr>
+      <td colspan="4">
+        <input type="text" id="display" v-model="num">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <input type="text" id="result">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">AC</td>
+      <td>/</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+      <td>*</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td @click="numpad(1)">1</td>
+      <td @click="numpad(2)">2</td>
+      <td @click="numpad(3)">3</td>
+      <td @click="numpad('+')">+</td>
+    </tr>
+    <tr>
+      <td colspan="2">0</td>
+      <td>.</td>
+      <td>=</td>
+    </tr>
+  </table>
+</template>
+
+<style scoped>
+h1 {
+  font-weight: 500;
+  font-size: 2.6rem;
+  top: -10px;
+}
+table {
+  border-collapse: collapse;
+}
+td {
+  cursor: pointer;
+  padding: 5px 10px;
+  text-align: center;
+}
+input {
+  border: none;
+}
+</style> -->
+
+
+
+<template>
+  <div>
+      <input v-model="numStr"><br />
+      <button id="out" @click="numpad('÷')">÷</button>
+      <button id="out" @click="init()">CE</button>
+      <button id="out" @click="init()">C</button>
+      <button id="out" @click="init()">Del</button>
+      <br />
+      <button @click="numpad(7)">7</button>
+      <button @click="numpad(8)">8</button>
+      <button @click="numpad(9)">9</button>
+      <button id="out" @click="numpad('x')">x</button>
+      <br />
+      <button @click="numpad(4)">4</button>
+      <button @click="numpad(5)">5</button>
+      <button @click="numpad(6)">6</button>
+      <button id="out" @click="numpad('-')">-</button>
+      <br />
+      <button @click="numpad(1)">1</button>
+      <button @click="numpad(2)">2</button>
+      <button @click="numpad(3)">3</button>
+      <button id="out" @click="numpad('+')">+</button>
+      <br />
+      <button>+/-</button>
+      <button @click="numpad(0)">0</button>
+      <button @click="numpad('.')">.</button>
+      <button id="out">=</button>
+  </div>
+</template>
+
+<style scoped>
+@media (min-width: 1024px) {
+  .greetings h1,
+  .greetings h3 {
+    text-align: left;
+  }
+}
+
+input {
+  width: 260px;
+  height: 50px;
+  text-align: right;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+button {
+  width: 55px;
+  height: 55px;
+  border:none;
+  border-radius: 50px;
+  background-color: bisque;
+  margin: 5px;
+  box-shadow: 5px 5px 5px 1px #BDBDBD;
+}
+
+#out {
+  background-color:#FFA873;
+}
+
+#out:hover{
+  background-color: #E0844F;
+}
+
+button:hover {
+  background-color: burlywood;
+  cursor: pointer;
+}
+
+button:active{
+  box-shadow: 1px 1px 1px 1px gray inset;
+}
+</style>
